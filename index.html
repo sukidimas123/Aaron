@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Personal Aaron</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #121212 0%, #2d2d2d 100%);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 15px;
+            width: 12px;
+            height: 12px;
+            background: #ffffff;
+            border-radius: 50%;
+        }
+        /* Custom shape for profile */
+        .profile-box {
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 20px 20px 60px #0a0a0a, -5px -5px 20px rgba(255,255,255,0.02);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 py-6 px-4 md:px-12 flex justify-between items-center bg-black/50 backdrop-blur-md">
+        <h1 class="text-xl font-bold tracking-tighter">MY<span class="text-gray-400">PROFILE</span></h1>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="#home" class="hover:text-gray-400 transition">Beranda</a>
+            <a href="#about" class="hover:text-gray-400 transition">Tentang</a>
+            <a href="#education" class="hover:text-gray-400 transition">Pendidikan</a>
+            <a href="#achievements" class="hover:text-gray-400 transition">Prestasi</a>
+            <a href="#contact" class="hover:text-gray-400 transition">Kontak</a>
+        </div>
+        <a href="https://wa.me/6281230578085" class="bg-white text-black px-5 py-2 rounded-full text-xs font-bold uppercase hover:bg-gray-200 transition">Hubungi Saya</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center px-4 md:px-20 pt-24">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center w-full">
+            <!-- Profile Image Box (Left) -->
+            <div class="md:col-span-5 lg:col-span-4 order-1">
+                <div class="profile-box relative aspect-square w-full max-w-[400px] mx-auto md:mx-0 group">
+                    <img src="https://i.ibb.co.com/V0vbfkS3/IMG-20250707-WA0038.jpg" alt="Foto Profil" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                    <div class="absolute inset-0 border-[12px] border-black/20 pointer-events-none"></div>
+                </div>
+            </div>
+
+            <!-- Content (Right) -->
+            <div class="md:col-span-7 lg:col-span-8 text-center md:text-left order-2">
+                <span class="inline-block py-1 px-4 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-widest uppercase mb-4 text-gray-400">Halo, Nama Saya</span>
+                <h2 class="text-5xl md:text-8xl font-black mb-6 text-gradient leading-none tracking-tighter">Aaron Ghazalah Yuma Prabawa</h2>
+                <p class="text-gray-400 text-lg md:text-2xl max-w-2xl mb-10 leading-relaxed font-light">
+                    Seorang individu yang bersemangat dengan dedikasi tinggi pada pengembangan diri dan pencapaian akademik. Berdomisili di Kota Magetan.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#about" class="bg-white text-black px-10 py-4 rounded-2xl font-bold hover:bg-gray-200 transition-all flex items-center gap-2 group">
+                        Jelajahi Profil <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
+                    </a>
+                    <a href="#contact" class="border border-white/20 px-10 py-4 rounded-2xl hover:bg-white/5 transition-all">Hubungi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 md:px-20 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="glass-card p-8 rounded-3xl">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-user-circle mr-3 text-gray-400"></i> Informasi Pribadi
+                </h3>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between border-b border-white/5 pb-2">
+                        <span class="text-gray-500">Hobi</span>
+                        <span class="font-medium">Basket,Lari,Futsal</span>
+                    </li>
+                    <li class="flex justify-between border-b border-white/5 pb-2">
+                        <span class="text-gray-500">Alamat</span>
+                        <span class="font-medium text-right">JlN.Mayjend Sungkono RT 08 RW 01,Kabupaten Magetan</span>
+                    </li>
+                    <li class="flex justify-between border-b border-white/5 pb-2">
+                        <span class="text-gray-500">Saudara</span>
+                        <span class="font-medium">Anak ke-2 dari 2 Bersaudara</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-500">Handphone</span>
+                        <span class="font-medium">0812-3057-8085</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold mb-6">Tentang <span class="text-gray-500">Saya</span></h3>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Saya percaya bahwa belajar adalah proses seumur hidup. Sejak kecil di TK hingga menempuh pendidikan menengah atas, saya selalu berusaha memberikan yang terbaik di setiap langkah perjalanan saya.
+                </p>
+                <div class="flex gap-4">
+                    <div class="glass-card p-4 rounded-2xl flex-1 text-center">
+                        <div class="text-2xl font-bold">12+</div>
+                        <div class="text-xs text-gray-500 uppercase">Tahun Studi</div>
+                    </div>
+                    <div class="glass-card p-4 rounded-2xl flex-1 text-center">
+                        <div class="text-2xl font-bold">5+</div>
+                        <div class="text-xs text-gray-500 uppercase">Lomba Diikuti</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-black/20">
+        <div class="max-w-4xl mx-auto px-4">
+            <h3 class="text-3xl font-bold mb-12 text-center">Riwayat <span class="text-gray-500">Pendidikan</span></h3>
+            <div class="relative pl-12">
+                <div class="timeline-line"></div>
+                
+                <!-- SMA -->
+                <div class="mb-12 relative">
+                    <div class="timeline-dot" style="top: 10px;"></div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-500 uppercase">2023 - 2026</span>
+                        <h4 class="text-xl font-bold mt-1">SMA Negeri 1 Magetan</h4>
+                        <p class="text-gray-400">Jurusan Ilmu Pengetahuan Alam (MIPA) dan aktif dalam ekstra Basket</p>
+                    </div>
+                </div>
+
+                <!-- SMP -->
+                <div class="mb-12 relative">
+                    <div class="timeline-dot" style="top: 10px;"></div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-500 uppercase">2020 - 2023</span>
+                        <h4 class="text-xl font-bold mt-1">SMP Negeri 4 Magetan</h4>
+                        <p class="text-gray-400">Aktif dalam ekstrakurikuler Basket</p>
+                    </div>
+                </div>
+
+                <!-- SD -->
+                <div class="mb-12 relative">
+                    <div class="timeline-dot" style="top: 10px;"></div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-500 uppercase">2014 - 2020</span>
+                        <h4 class="text-xl font-bold mt-1">SD Warga dan SD Sukowinangun 3</h4>
+                        <p class="text-gray-400">SD WARGA selama 4 Tahun dan SD Sukowinangun 2 Tahun</p>
+                    </div>
+                </div>
+
+                <!-- TK -->
+                <div class="relative">
+                    <div class="timeline-dot" style="top: 10px;"></div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-500 uppercase">2013 - 2014</span>
+                        <h4 class="text-xl font-bold mt-1">TK Kartika</h4>
+                        <p class="text-gray-400">Awal mula perjalanan pendidikan saya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-20 px-4 md:px-20 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-12 text-center">Lomba & <span class="text-gray-500">Prestasi</span></h3>
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Lomba 1 -->
+            <div class="glass-card p-6 rounded-3xl border-t-4 border-gray-400">
+                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+                    <i class="fas fa-trophy text-yellow-500"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2">Juara 1 Lomba basket</h4>
+                <p class="text-sm text-gray-400">Tingkat Kota - 2024. Kompetisi Magetan Cup.</p>
+            </div>
+            <!-- Lomba 2 -->
+            <div class="glass-card p-6 rounded-3xl border-t-4 border-gray-600">
+                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+                    <i class="fas fa-medal text-gray-300"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2">lomba polisi cilik</h4>
+                <p class="text-sm text-gray-400">Tingkat Provinsi - 2016. Kompetisi kesenian dan penyampaian tata tertib lalu lintas.</p>
+            </div>
+            <!-- Lomba 3 -->
+            <div class="glass-card p-6 rounded-3xl border-t-4 border-gray-400">
+                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+                    <i class="fas fa-award text-orange-400"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2">lomba Porprov Basket</h4>
+                <p class="text-sm text-gray-400">Tingkat Provinsi - 2025. Pengalaman berharga berkompetisi secara Provinsi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 mb-20">
+        <div class="max-w-4xl mx-auto glass-card p-10 rounded-[3rem] text-center">
+            <h3 class="text-3xl font-bold mb-4">Mari <span class="text-gray-500">Terhubung</span></h3>
+            <p class="text-gray-400 mb-8">Saya terbuka untuk kolaborasi atau sekadar berdiskusi tentang hal-hal menarik.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="tel:081234567890" class="flex items-center space-x-3 bg-white/5 px-6 py-3 rounded-2xl hover:bg-white/10 transition">
+                    <i class="fas fa-phone"></i>
+                    <span>0812-3456-7890</span>
+                </a>
+                <a href="mailto:yumamagetan.gmail.com" class="flex items-center space-x-3 bg-white/5 px-6 py-3 rounded-2xl hover:bg-white/10 transition">
+                    <i class="fas fa-envelope"></i>
+                    <span>yumamagetan.gmail.com</span>
+                </a>
+            </div>
+            <div class="mt-10 pt-10 border-t border-white/5 flex justify-center space-x-6 text-2xl">
+                <a href="https://instagram.com/@yumaaronn" class="text-gray-500 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-gray-600 text-sm">
+        &copy; 2024 [Nama Anda]. Dibuat dengan dedikasi.
+    </footer>
+
+</body>
+</html>
